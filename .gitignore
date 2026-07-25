@@ -1,11 +1,18 @@
+# Python environment
 venv/
 
+# Python cache
 __pycache__/
-
 *.pyc
 
+# Mac files
 .DS_Store
 
-models/*.pt
+# AI models
+*.pt
 
+# YOLO training results
+runs/
+
+# Raw images
 data/raw_images/
