@@ -1,0 +1,7 @@
+path: data
+
+train: annotated_images
+val: test_images
+
+names:
+  0: plate

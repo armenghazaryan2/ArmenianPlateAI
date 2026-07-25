@@ -1,0 +1,7 @@
+image,status,plate
+
+001.jpg,success,37EX847
+002.jpg,success,10IO002
+003.jpg,no_plate,
+004.jpg,foreign_plate,
+005.jpg,unreadable,
