@@ -1,7 +1,7 @@
 path: data
 
-train: annotated_images
-val: test_images
+train: images/train
+val: images/val
 
 names:
   0: plate
