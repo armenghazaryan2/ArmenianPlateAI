@@ -1,4 +1,4 @@
-# Python environment
+# Python virtual environment
 venv/
 
 # Python cache
@@ -8,18 +8,5 @@ __pycache__/
 # Mac files
 .DS_Store
 
-# AI models
-*.pt
-
-# YOLO training results
-runs/
-
-# Backups / archives
-*.tar.gz
-*.zip
-
-# Raw / experimental datasets
-data/raw_images/
-data/raw_new/
-
-# Keep project test datasets in Git
+# Large backup archive exceeding GitHub's normal file limit
+armenian_plate_before_cleanup.tar.gz
