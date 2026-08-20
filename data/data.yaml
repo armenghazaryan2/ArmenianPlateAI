@@ -1,7 +1,8 @@
-path: data
+path: /Users/armenghazaryan/Desktop/ArmenianPlateAI/data
 
 train: images/train
 val: images/val
+test: images/test
 
 names:
   0: plate

@@ -14,5 +14,14 @@ __pycache__/
 # YOLO training results
 runs/
 
-# Raw images
+# Backups / archives
+*.tar.gz
+*.zip
+
+# Experimental / temporary datasets
 data/raw_images/
+data/raw_new/
+data/unlabeled_test/
+data/v3_candidates/
+data/images/test/
+data/images/real_world_test/

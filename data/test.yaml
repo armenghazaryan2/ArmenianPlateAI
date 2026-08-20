@@ -1,0 +1,7 @@
+path: .
+train: data/images/train
+val: data/images/test
+test: data/images/test
+
+names:
+  0: plate

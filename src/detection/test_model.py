@@ -1,17 +1,31 @@
-from ultralytics import YOLO
+from src.detection.plate_detector import PlateDetector
 
-# Load trained Armenian plate model
-model = YOLO("runs/detect/train-3/weights/best.pt")
+IMAGE_PATH = "data/images/train/7434404e-001.jpg"
 
-# Test image
-image_path = "data/images/train/7434404e-001.jpg"
+detector = PlateDetector()
 
-# Run AI detection
-results = model(image_path)
+for confidence in [0.40, 0.20, 0.10, 0.05, 0.01]:
 
-# Show result
-for result in results:
-    result.show()
+    print("\n" + "=" * 50)
+    print(f"Testing confidence: {confidence}")
+    print("=" * 50)
 
-    print("Detected boxes:")
-    print(result.boxes)
+    results = detector.model(
+        IMAGE_PATH,
+        conf=confidence
+    )
+
+    boxes = results[0].boxes
+
+    if boxes is None or len(boxes) == 0:
+        print("No detections.")
+        continue
+
+    print(f"Number of detections: {len(boxes)}")
+
+    for i, box in enumerate(boxes):
+        print(
+            f"Detection {i + 1}: "
+            f"confidence={float(box.conf[0]):.6f}, "
+            f"box={box.xyxy[0].tolist()}"
+        )
